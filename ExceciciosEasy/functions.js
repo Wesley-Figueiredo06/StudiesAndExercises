@@ -159,19 +159,24 @@ const res = transformarTemp(1, "Fahrenheit");
 //#endregion
 
 //#region Jogo de adivinhação.
+let getRandomRange = randomNumber();
+
+function randomNumber(){
+  return Math.floor(Math.random() * 100 ) + 1;
+}
 
 export function game(palpite) {
-  const randomRange = Math.floor(Math.random() * (1 - 100 + 1)) + 100;
   let resposta;
-  if (palpite > randomRange) {
+
+  if (palpite > getRandomRange) {
     resposta = "Passou em!"
-  } else if (palpite < randomRange) {
+  } else if (palpite < getRandomRange) {
     resposta = "Está distante!"
   } else {
-    resposta = alert("Perfeito! Você acertou!");
+    resposta = "Perfeito! Você acertou!";
+  getRandomRange = randomNumber();
   }
   return resposta;
 }
 
 //#endregion
-
