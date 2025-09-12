@@ -7,7 +7,6 @@ export default class Contato {
     this.#nome = nome;
     this.#telefone = Number(telefone);
     this.#email = email;
-
   }
 
   getNome() {
