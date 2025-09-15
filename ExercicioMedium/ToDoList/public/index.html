@@ -1,14 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do Organization</title>
     <link rel="stylesheet" href="./assets/styles/styles.css">
 </head>
+
 <body>
-    
-    
+    <div class="main-container">
+        <section class="d-flex">
+            <div class="form-container">
+                <form id="form" action="#" class="container">
+                    <h2>Adicionar tarefas</h2>
+
+                    <div class="NomeTarefa-container">
+                        <label for="NomeTarefa">Nome da tarefa:</label>
+                        <input type="text" id="NomeTarefa" placeholder="Digite nome da tarefa">
+                    </div>
+
+                    <div class="TipoTarefa-container">
+                        <label for="TipoTarefa">Tipo de tarefa:</label>
+                        <input type="text" id="TipoTarefa" placeholder="Digite o tipo da tarefa">
+                    </div>
+
+                    <div class="tempoTarefa-container">
+                        <label for="tempoTarefa">Duração da tarefa:</label>
+                        <select id="TempoTarefa">
+                            <option value="0">-- Não informar --</option>
+                            <option value="5">5 minutos</option>
+                            <option value="10">10 minutos</option>
+                            <option value="15">15 minutos</option>
+                            <option value="30">30 minutos</option>
+                            <option value="60">1 hora</option>
+                        </select>
+                    </div>
+
+                    <div class="input-container d-flex">
+                        <label for="descricao">Descrição:</label>
+                        <textarea maxlength="56" wrap="soft" rows="2" cols="26" id="Descricao"
+                            placeholder="Descreva aqui..."></textarea>
+                    </div>
+
+                    <button type="submit" id="btnSmt">Salvar</button>
+                </form>
+
+        </section>
+        <section>
+            .
+        </section>
+    </div>
+    </div>
 </body>
 <script type="module" src="./js/index.js"></script>
+
 </html>

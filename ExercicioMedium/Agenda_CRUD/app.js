@@ -13,9 +13,9 @@ agenda.adicionarContato(contato1);
 const contatosListados = agenda.listarContatos();
 
 function enviarDados(listaContatos) {
-  let listados = listaContatos;
-  db.push(...listados);
-  return db;
+    let listados = listaContatos;
+    db.push(...listados);
+    return db;
 }
 
 enviarDados(contatosListados);
