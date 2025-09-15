@@ -10,6 +10,11 @@
     padding: 0;
 }
 
+input{
+    border-width: 0.5px;
+    border-style: outset;
+}
+
 .bg-primary {
     background-color: var(--primary-color);
 }
