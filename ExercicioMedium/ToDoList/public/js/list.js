@@ -13,8 +13,7 @@ console.log(dados);
 //                 <button id="apagar" type="button"><img src="./assets/img/cancel.png" alt=""></button> `;
 // });
 
-
-carregarElemento(dados)
+carregarElemento(dados);
 
 function carregarElemento(data) {
   const resultado = document.querySelector(".tarefas-lista-input");
@@ -24,17 +23,15 @@ function carregarElemento(data) {
   for (let i = 0; i < data.length; i++) {
     const tr = document.createElement("tr");
     let td = document.createElement("td");
-
+    const btn = document.createElement("button");
 
     td = document.createElement("td");
     td.innerText = data[i].Tarefa;
-    tr.appendChild(td)
-
+    btn.innerText = data[i].Tarefa;
+    tr.appendChild(btn);
+    tr.appendChild(td);
 
     table.appendChild(tr);
-    resultado.appendChild(table)
-
-
+    resultado.appendChild(table);
   }
-
 }
