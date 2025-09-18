@@ -7,16 +7,34 @@ const dados = JSON.parse(localStorage.getItem("Tarefas"));
 
 console.log(dados);
 
-Object.keys(...dados).forEach((el, index) => {
-  tarefasDiv.innerHTML += `<label id="tarefa"><button id="infoTarefa" type="button">${index.Tarefa}</button></label>
-                <button id="editar" type="button"><img src="./assets/img/pencil.png" alt=""></button>
-                <button id="apagar" type="button"><img src="./assets/img/cancel.png" alt=""></button> `;
-});
+// dados.forEach((el) => {
+//   tarefasDiv.innerHTML += `<label id="${el}tarefa"><button id="infoTarefa" type="button">${el.Tarefa}</button></label>
+//                 <button id="editar" type="button"><img src="./assets/img/pencil.png" alt=""></button>
+//                 <button id="apagar" type="button"><img src="./assets/img/cancel.png" alt=""></button> `;
+// });
 
-function criarElemento(element, text, id, classNamee) {
-  const el = document.createElement(element);
-  el.textContent = text;
-  el.id = id;
 
-  return el;
+carregarElemento(dados)
+
+function carregarElemento(data) {
+  const resultado = document.querySelector(".tarefas-lista-input");
+  const table = document.querySelector(".index-table");
+  const arrayData = data;
+
+  for (let i = 0; i < data.length; i++) {
+    const tr = document.createElement("tr");
+    let td = document.createElement("td");
+
+
+    td = document.createElement("td");
+    td.innerText = data[i].Tarefa;
+    tr.appendChild(td)
+
+
+    table.appendChild(tr);
+    resultado.appendChild(table)
+
+
+  }
+
 }
